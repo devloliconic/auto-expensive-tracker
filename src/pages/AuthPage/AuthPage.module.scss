@@ -1,0 +1,15 @@
+
+.welcomeTitle{
+  @apply text-2lg
+}
+
+.pageContainer{
+  @apply text-center max-w-fit md:container md:mx-auto md:text-left
+}
+
+.form {
+  > h1{
+    @apply mb-[85px]
+  }
+}
+

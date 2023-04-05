@@ -1,11 +1,14 @@
 import React from 'react';
 
+import { FirebaseContext, useFirebaseConnect } from '@/utils';
+
 import { AuthPage } from './pages/AuthPage';
 
 export const App = () => {
+  const { dataBase } = useFirebaseConnect();
   return (
-    <div>
+    <FirebaseContext.Provider value={{ dataBase }}>
       <AuthPage />
-    </div>
+    </FirebaseContext.Provider>
   );
 };
