@@ -6,12 +6,12 @@ export const FirebaseContext = createContext<{ dataBase: unknown } | null>(null)
 
 export const useFirebaseConnect = () => {
   const firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
-    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_APP_ID,
+    apiKey: 'AIzaSyALEznJ2Wq68gbxXNUDxkqs67gYybNe9L8',
+    authDomain: 'auto-expensive-tracker.firebaseapp.com',
+    projectId: 'auto-expensive-tracker',
+    storageBucket: 'auto-expensive-tracker.appspot.com',
+    messagingSenderId: '91850912037',
+    appId: '1:91850912037:web:8f70a6bc88b46653002acc',
   };
 
   const app = initializeApp(firebaseConfig);
