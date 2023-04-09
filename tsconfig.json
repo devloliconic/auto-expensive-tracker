@@ -16,10 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "allowUmdGlobalAccess": true,
-    "types": ["node", "vite-plugin-svgr/client"],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "types": ["node", "vite-plugin-svgr/client"]
   },
 }
