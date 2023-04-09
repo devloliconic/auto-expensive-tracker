@@ -1,15 +1,22 @@
-
-.welcomeTitle{
-  @apply text-2lg
+.welcomeTitle {
+  @apply text-2lg text-center md:text-2lg md:text-left;
 }
 
-.pageContainer{
-  @apply text-center max-w-fit md:container md:mx-auto md:text-left
+.pageContainer {
+  @apply container mx-auto px-4;
 }
 
 .form {
-  > h1{
-    @apply mb-[85px]
+  > h1 {
+    @apply mb-[85px];
+  }
+  > input {
+    @apply p-[20px] w-full text-2xl text-gray bg-darkGray rounded md:w-[50%] outline-none;
+  }
+  > label {
+    @apply block text-xl md:text-2xl;
+  }
+  > button {
+    @apply mt-[130px] w-full md:w-[50%];
   }
 }
-
