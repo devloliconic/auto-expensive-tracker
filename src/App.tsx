@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import { RouterProvider } from 'react-router-dom';
 
 import { FirebaseContext, useFirebaseConnect } from '@/utils';
 
-import { AuthPage } from './pages/AuthPage';
+import { routes } from './pages';
 
 export const App = () => {
   const { dataBase } = useFirebaseConnect();
   return (
     <FirebaseContext.Provider value={{ dataBase }}>
-      <AuthPage />
+      <Suspense fallback={'Loading'}>
+        <RouterProvider router={routes} />
+      </Suspense>
     </FirebaseContext.Provider>
   );
 };
