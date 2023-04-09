@@ -5,15 +5,7 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontSize: {
-        DEFAULT: "1rem",
-        "2lg": "2rem"
-      },
-    },
-    container: {
-
-    }
+    extend: {},
   },
   plugins: [],
 }
