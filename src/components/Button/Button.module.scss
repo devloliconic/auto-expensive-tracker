@@ -1,0 +1,18 @@
+.baseButton,
+.baseButton[type='button'],
+.baseButton[type='reset'],
+.baseButton[type='submit'] {
+  @apply outline-none bg-redFill text-2lg text-center border rounded border-redBorder p-[12px];
+}
+
+.box {
+  @apply rounded;
+}
+
+.icon {
+  @apply rounded-[100%] w-8 h-8;
+}
+
+.round {
+  @apply rounded-[29px];
+}
