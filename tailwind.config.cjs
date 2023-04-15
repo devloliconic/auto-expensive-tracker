@@ -12,6 +12,7 @@ module.exports = {
         darkGray: '#c6c6c6',
         redBorder: '#ff7D7D',
         redFill: '#FF9E9E',
+        error: "#C10000"
       },
     },
     container: {},
