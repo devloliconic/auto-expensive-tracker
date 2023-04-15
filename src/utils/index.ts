@@ -1,1 +1,1 @@
-export * from './useFirebaseConnect';
+export * from './firebase';
