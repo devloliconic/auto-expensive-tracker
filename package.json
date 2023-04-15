@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/node": "^18.15.0",
+    "@types/node": "^18.15.11",
     "firebase": "^9.19.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
