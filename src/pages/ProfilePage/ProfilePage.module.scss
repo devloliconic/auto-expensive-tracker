@@ -1,0 +1,19 @@
+.profileTitle{
+  @apply text-2lg text-center md:text-2lg;
+}
+
+.pageContainer {
+  @apply flex items-center justify-center container mx-auto px-4 h-[100vh];
+}
+
+.profile{
+  > h5 {
+    @apply mb-[85px]
+  }
+  > label{
+    @apply block text-center text-xl md:text-2xl mb-[24px]
+  }
+  > button {
+    @apply mt-[14px] w-full
+  }
+}
