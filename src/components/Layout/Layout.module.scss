@@ -1,0 +1,18 @@
+.pageContainer {
+  @apply px-[19px] w-[calc((100vh-40px))];
+}
+
+.header{
+  @apply flex items-center justify-between bg-redFill p-4;
+
+  >svg{
+    @apply cursor-pointer w-[42px] h-[42px]
+  }
+}
+
+.logoContainer{
+  @apply flex items-center flex-col text-[10px] md:text-sm;
+}
+
+.backButton {
+  @apply bg-transparent px-5 py-3 text-black rounded-full border-black border-2}
