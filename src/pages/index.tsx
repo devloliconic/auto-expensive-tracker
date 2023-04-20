@@ -3,6 +3,7 @@ import { Navigate, createBrowserRouter } from 'react-router-dom';
 
 const AuthPage = React.lazy(() => import('./AuthPage'));
 const HomePage = React.lazy(() => import('./HomePage'));
+const ProfilePage = React.lazy(() => import('./ProfilePage'));
 
 export const router = createBrowserRouter([
   {
@@ -10,13 +11,14 @@ export const router = createBrowserRouter([
     element: <AuthPage />,
   },
   {
+    path: 'profile',
+    element: <ProfilePage />,
+  },
+  {
     path: '/',
     element: <HomePage />,
   },
-  {
-    path: ':vim',
-    element: <div>profile</div>,
-  },
+
   {
     path: '*',
     element: <Navigate to="/" />,

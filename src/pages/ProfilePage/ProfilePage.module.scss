@@ -1,0 +1,39 @@
+.pageWrapper {
+  @apply p-4;
+
+  > h2{
+    @apply text-lg text-black text-center md:text-xl mb-[35px];
+  }
+}
+
+.userInfoContainer{
+  @apply mb-[75px];
+  >:not(:last-child){
+    @apply mb-[29px]
+  }
+}
+
+.carInfoContainer{
+  @apply rounded p-[19px] bg-gray2 text-black;
+
+  >div:first-child{
+    @apply flex items-center gap-5 mb-[23px];
+    >img{
+      @apply w-[141px] h-[141px] rounded-full;
+    }
+    >p{
+      @apply text-2xl;
+    }
+  }
+
+  >div:last-child{
+    >p {
+      @apply text-xl
+    }
+    >p:not(:last-child){
+      @apply mb-[23px]
+    }
+  }
+
+
+}
