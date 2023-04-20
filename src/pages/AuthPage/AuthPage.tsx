@@ -2,7 +2,8 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
-import { useAddUserEntries } from '@/api/useAddUserEntries';
+import { useAddUserEntries } from '@/api/mutations/useAddUserEntries';
+import { useGetUserByVin } from '@/api/queries/useGetUserByVin';
 import { Button } from '@/components/Button';
 
 import styles from './AuthPage.module.scss';
@@ -19,14 +20,25 @@ const AuthPage: React.FC = () => {
   } = useForm<FormValues>({ mode: 'onChange' });
 
   const { addUser } = useAddUserEntries();
+  const { getUserByVin } = useGetUserByVin();
   const navigate = useNavigate();
 
-  const onSubmit = (data: FormValues) => {
-    console.log(data);
-    addUser(data.vin, { vin: data.vin }).then(() => {
-      localStorage.setItem('USER_VIN', data.vin);
-      navigate('/');
-    });
+  const onSubmit = async (data: FormValues) => {
+    try {
+      const fireBaseUser = await getUserByVin(data.vin);
+      if (fireBaseUser.docs.length) {
+        localStorage.setItem('USER_VIN', data.vin);
+        navigate('/');
+        return;
+      } else {
+        addUser(data.vin, { vin: data.vin }).then(() => {
+          localStorage.setItem('USER_VIN', data.vin);
+          navigate('/');
+        });
+      }
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
