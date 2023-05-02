@@ -7,6 +7,9 @@
 }
 
 .userInfoContainer{
+  > p{
+    @apply text-xl
+  }
   @apply mb-[75px];
   >:not(:last-child){
     @apply mb-[29px]
@@ -34,6 +37,4 @@
       @apply mb-[23px]
     }
   }
-
-
 }
