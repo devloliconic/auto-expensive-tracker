@@ -5,7 +5,7 @@ import { ButtonProps } from './button.interface';
 
 export const Button: React.FC<ButtonProps> = ({ variant = 'box', children, size = 'large', ...props }) => {
   return (
-    <button {...props} className={`${styles.baseButton} ${styles[variant]}`}>
+    <button className={`${styles.baseButton} ${styles[size]} ${styles[variant]}`} {...props}>
       {children}
     </button>
   );
