@@ -5,14 +5,27 @@
   @apply outline-none bg-redFill text-2lg text-center border rounded border-redBorder p-[12px] shadow-md;
 }
 
-.box {
-  @apply rounded ;
-}
-
 .icon {
   @apply rounded-[32px] w-8 h-8;
 }
 
 .rounded {
   @apply rounded-[32px];
+}
+
+.large{
+  @apply p-[12px] text-2lg
+}
+
+.medium{
+  @apply p-[8px] text-lg
+}
+
+
+.small{
+  @apply p-[6px] text-xl
+}
+
+.box{
+  @apply rounded-[5px]
 }

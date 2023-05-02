@@ -1,3 +1,5 @@
+import React from 'react';
+
 type ButtonVariant = 'box' | 'rounded' | 'icon' | 'edit';
 type ButtonSize = 'small' | 'medium' | 'large';
 
