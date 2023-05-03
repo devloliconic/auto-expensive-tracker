@@ -1,0 +1,7 @@
+.pageWrapper {
+  @apply p-4;
+
+  > h2{
+    @apply text-lg text-black text-center md:text-xl mb-[35px];
+  }
+}
