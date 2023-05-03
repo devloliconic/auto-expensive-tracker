@@ -11,6 +11,7 @@ module.exports = {
         gray: '#717171',
         darkGray: '#c6c6c6',
         gray2: "#D9D9D9",
+        textGray: "#6F6F6F",
         redBorder: '#ff7D7D',
         redFill: '#FF9E9E',
         error: "#C10000"

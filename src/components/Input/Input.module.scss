@@ -1,0 +1,17 @@
+.baseInput::-webkit-outer-spin-button,
+.baseInput::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+
+.baseInput[type="number"]{
+  -moz-appearance: textfield;
+}
+
+
+.baseInput{
+  @apply rounded outline-none bg-gray2 p-[10px] w-full text-textGray
+}
+
+.label{
+  @apply text-sm text-black mb-[7px] block
+}
