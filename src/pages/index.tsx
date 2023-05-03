@@ -4,6 +4,7 @@ import { Navigate, createBrowserRouter } from 'react-router-dom';
 const AuthPage = React.lazy(() => import('./AuthPage'));
 const HomePage = React.lazy(() => import('./HomePage'));
 const ProfilePage = React.lazy(() => import('./ProfilePage'));
+const ProfileEditPage = React.lazy(() => import('./ProfileEditPage'));
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
   {
     path: 'profile',
     element: <ProfilePage />,
+  },
+  {
+    path: 'profile/edit',
+    element: <ProfileEditPage />,
   },
   {
     path: '/',
