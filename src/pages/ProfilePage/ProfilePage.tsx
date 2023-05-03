@@ -1,5 +1,6 @@
 import { DocumentData } from 'firebase/firestore';
 import React, { useEffect, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { useGetUserByVin } from '@/api/queries/useGetUserByVin';
 import { Button } from '@/components/Button';
@@ -9,6 +10,7 @@ import styles from './ProfilePage.module.scss';
 
 const ProfilePage = () => {
   const { getUserByVin } = useGetUserByVin();
+  const navigate = useNavigate();
 
   const [userData, setUserData] = useState<DocumentData | undefined>(undefined);
   console.log(userData);
@@ -32,11 +34,11 @@ const ProfilePage = () => {
         <h2>Профиль</h2>
         <div className={styles.userInfoContainer}>
           {userName && <p>{userName}</p>}
-          <Button variant="box" size="small">
+          <Button variant="box" size="small" onClick={() => navigate('/profile/edit')}>
             Редактировать профиль
           </Button>
         </div>
-        {userData?.nameAuto && (
+        {userData?.nameAuto ? (
           <div className={styles.carInfoContainer}>
             <div>
               <img
@@ -51,6 +53,8 @@ const ProfilePage = () => {
               {userData?.vin && <p>VIN: {userData?.vin}</p>}
             </div>
           </div>
+        ) : (
+          <div className={styles.autoFallback}>Нету данных о автомобиле</div>
         )}
       </div>
     </Layout>
