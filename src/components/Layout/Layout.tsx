@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { ReactComponent as BackButton } from '@/icons/backButton.svg';
 import { ReactComponent as Logo } from '@/icons/logo.svg';
 import { ReactComponent as Profile } from '@/icons/profile.svg';
 
