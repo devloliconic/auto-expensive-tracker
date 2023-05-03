@@ -13,7 +13,6 @@ const ProfilePage = () => {
   const navigate = useNavigate();
 
   const [userData, setUserData] = useState<DocumentData | undefined>(undefined);
-  console.log(userData);
   const userName = useMemo(
     () => [userData?.lastName, userData?.firstName, userData?.userYears].filter(Boolean).join(' '),
     [userData?.firstName, userData?.lastName, userData?.userYears],
