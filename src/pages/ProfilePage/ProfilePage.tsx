@@ -44,7 +44,7 @@ const ProfilePage = () => {
                 src="http://st.gde-fon.com/wallpapers_original/83603_aston-martin_gauntlet_1920x1200_www.Gde-Fon.com.jpg"
                 alt="car"
               />
-              <p>userData?.nameAuto</p>
+              <p>{userData?.nameAuto}</p>
             </div>
             <div>
               {userData?.carRange && <p>Пробег: {userData?.carRange} км</p>}

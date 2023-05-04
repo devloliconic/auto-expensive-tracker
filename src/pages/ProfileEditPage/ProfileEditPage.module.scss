@@ -4,4 +4,23 @@
   > h2{
     @apply text-lg text-black text-center md:text-xl mb-[35px];
   }
+
+  button{
+    width: 100%;
+  }
+
+
+}
+
+.formSection {
+  h3{
+    @apply text-black text-2xl mb-[11px]
+  };
+
+  > input:not(:last-child){
+    @apply mb-[10px];
+  };
+  @apply mb-[32px]
+
+
 }
