@@ -27,6 +27,11 @@ const ProfilePage = () => {
     }
   }, [getUserByVin, userData, userVin]);
 
+  const handleExitClick = () => {
+    localStorage.clear();
+    navigate('/login');
+  };
+
   return (
     <Layout>
       <div className={styles.pageWrapper}>
@@ -35,6 +40,9 @@ const ProfilePage = () => {
           {userName && <p>{userName}</p>}
           <Button variant="box" size="small" onClick={() => navigate('/profile/edit')}>
             Редактировать профиль
+          </Button>
+          <Button variant="box" size="small" onClick={handleExitClick}>
+            Выйти
           </Button>
         </div>
         {userData?.nameAuto ? (
