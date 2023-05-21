@@ -50,7 +50,7 @@ const ProfileEditPage = () => {
   useEffect(() => {
     if (!userData) {
       getUserByVin(userVin || '').then((data) => {
-        setUserData(data?.docs[0]?.data());
+        setUserData(data?.data());
       });
     }
   }, [getUserByVin, userData, userVin]);

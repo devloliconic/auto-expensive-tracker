@@ -26,7 +26,7 @@ const AuthPage: React.FC = () => {
   const onSubmit = async (data: FormValues) => {
     try {
       const fireBaseUser = await getUserByVin(data.vin);
-      if (fireBaseUser?.docs.length) {
+      if (fireBaseUser.data()) {
         localStorage.setItem('USER_VIN', data.vin);
         navigate('/');
         return;
