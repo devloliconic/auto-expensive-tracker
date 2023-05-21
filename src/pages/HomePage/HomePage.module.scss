@@ -1,0 +1,26 @@
+.diogram{ 
+    canvas{
+        @apply flex items-center justify-center max-h-[500px];
+    }
+    >p{
+        @apply text-xl text-center
+    }
+    @apply mb-[30px]
+}
+
+.wrapper{
+    >button{
+        @apply mt-5 w-full;
+    }
+    @apply  px-[15px];
+}
+
+.coastList{
+    >div:not(:last-child){
+        margin-bottom: 20px;
+    }
+}
+
+.category{
+    @apply text-xl my-3.5;
+}
